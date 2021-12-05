@@ -1,0 +1,63 @@
+<?php
+// Initialize the session
+session_start();
+if (isset($_SESSION['id'])){
+  $userId=$_SESSION['id'];
+}
+else{
+  $userId=0;
+}
+
+require_once "additional/dbConnect.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+  <title>Home_page</title>
+</head>
+<body>
+    <header>
+        <nav>  
+            <h1>EMS</h1>
+            <ul id="navli">  
+               <li>  
+                  <a class="homered" href="index.html"> Home </a>  
+               </li>  
+               <li>  
+                  <a class="homeblack" href="about.html"> About </a>  
+               </li>  
+               <li>  
+                  <a class="homeblack" href="contact.html"> Contact </a>  
+               </li>  
+               <li> 
+                   <a class="homeblack" href="login.html">login</a>  
+                </li>  
+            </ul>  
+        </nav>
+    </header>
+    <div class="divider"></div>
+	<div id="divimg">
+		
+	</div>
+
+	
+	<img src="img/1.jpg" style="float: left; margin-right: 100px; margin-top: 35px; margin-left: 70px">
+	
+
+	<div style="margin-top: 175px">
+		
+		<h1 style="font-family: 'Lobster', cursive; font-weight: 200; font-size: 50px; margin-top: 100px; text-align: center;">Welcome to EMS.</h1>
+		<p style="font-family: 'Montserrat', sans-serif; font-size: 30px ; text-align: center;">Employee management system.</p>
+	</div>
+		
+
+	
+</body>
+</html>
